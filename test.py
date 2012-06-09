@@ -4,7 +4,7 @@ import sys
 import os
 import sys
 import struct
-import pcap as lib
+import lib.pcap as lib
 
 	
 
@@ -17,8 +17,8 @@ def critError( message ):
 
 
 def main():
-	wfile = open("output.pcap", "wb")
-	pcapObj = lib.pcap( userInput( "Enter Pcap File: " ) )
+	wfile = open("output", "wb")
+	pcapObj = lib.pcap( sys.argv[1] )
 	
 	#for byte in rfile.read():
 	#	wfile.write(byte)
