@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import struct
+import protos
 
 
 #Notes:
@@ -93,6 +94,14 @@ class pcap():
 		
 	def getHeader(self):
 		return self.header
+		
+	#IMPLEMENT THIS***
+	def getProtoByPort ( port ):
+		proto = ''
+		if ( proto in protos.protoList ):
+			port = protos.protoList[ name ]
+		else:
+			port = '
 		
 		
 

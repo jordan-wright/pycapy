@@ -5,6 +5,7 @@ import os
 import sys
 import struct
 import lib.pcap as lib
+import lib.protos as protoList
 
 	
 
@@ -18,6 +19,7 @@ def critError( message ):
 
 def main():
 	wfile = open("output", "wb")
+	print protoList.protos["TEST"]
 	pcapObj = lib.pcap( sys.argv[1] )
 	
 	#for byte in rfile.read():
