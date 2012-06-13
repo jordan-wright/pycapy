@@ -2,10 +2,8 @@
 
 import sys
 import os
-import sys
-import struct
 import lib.pcap as lib
-import lib.protos as protoList
+import lib.protos as protos
 
 	
 
@@ -19,7 +17,6 @@ def critError( message ):
 
 def main():
 	wfile = open("output", "wb")
-	print protoList.protos["TEST"]
 	pcapObj = lib.pcap( sys.argv[1] )
 	
 	#for byte in rfile.read():
@@ -32,6 +29,7 @@ def main():
 	if(header.checkMagic()):
 		print "Magic Number Valid.."
 		
+	#pcapObj.parse()
 	wfile.close()
 	
 main()

@@ -6,7 +6,7 @@ import struct
 
 #This list taken from http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xml
 
-protoList = { 	"HOPOPT" 			: 	'\x00',
+protoList = {	"HOPOPT" 			: 	'\x00',
 				"ICMP"				:	'\x01',
 				"IGMP"				:	'\x02',
 				"GGP"				:	'\x03',
